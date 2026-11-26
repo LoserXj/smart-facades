@@ -21,9 +21,10 @@ h2.center{text-align:center;margin-bottom:48px}
 
 /* bar */
 .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
-.topnav{display:flex;align-items:center;height:60px;gap:24px}
+.topnav{display:flex;align-items:center;height:64px;gap:24px}
 .brand{font-weight:700;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
-.uni{color:var(--polyu);font-weight:800;font-size:19px;letter-spacing:-.01em}
+.logo{height:38px;width:auto}
+.team-logo{height:52px;width:auto;margin-bottom:28px}
 .brand-sep{width:1px;height:20px;background:var(--line)}
 .nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
@@ -179,6 +180,7 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.045em;margin:
   .bar-row{grid-template-columns:1fr auto;row-gap:6px}
   .bar{grid-column:1/-1;grid-row:2}
   .brand-name,.brand-sep{display:none}
+  .logo{height:30px}
   .nav{margin-left:0}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
