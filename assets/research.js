@@ -23,3 +23,25 @@ bindChoices('[data-scope]', button => {
     row.hidden = scope !== 'all' && row.dataset.area !== scope;
   });
 });
+
+const watchDialog = document.querySelector('.watch-dialog');
+if (watchDialog && typeof watchDialog.showModal === 'function') {
+  const screen = watchDialog.querySelector('.watch-screen');
+  const original = watchDialog.querySelector('.watch-original');
+  document.querySelectorAll('a[data-player]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const player = link.dataset.player;
+      const template = document.getElementById('player-' + player);
+      watchDialog.dataset.player = player;
+      watchDialog.querySelector('h3').textContent = link.querySelector('strong').textContent;
+      original.href = link.href;
+      original.textContent = player === 'demo' ? 'Open the video file' : 'Watch on YouTube';
+      screen.replaceChildren(template.content.cloneNode(true));
+      watchDialog.showModal();
+      screen.querySelector('video')?.play().catch(() => {});
+    });
+  });
+  watchDialog.addEventListener('close', () => screen.replaceChildren());
+}

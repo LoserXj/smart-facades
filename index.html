@@ -25,16 +25,23 @@
     <h2>A film that absorbs indoor moisture</h2>
     <p>At night, water-attracting nanofibres capture moisture from the air, and a hydrogel layer stores it. As the film dries in sunlight, it scatters more light and shades the window.</p>
   </div>
-  <div class="film-demo">
-    <figure>
-      <video controls playsinline preload="metadata" poster="assets/img/film-window-poster.jpg"
-             width="540" height="960" aria-labelledby="film-video-caption">
-        <source src="assets/film-window.mp4" type="video/mp4">
-        <a href="assets/film-window.mp4">Open the window demonstration video</a>
-      </video>
-      <figcaption id="film-video-caption">Window-mounted film demonstration · 20 seconds · Silent</figcaption>
-    </figure>
-    <div>
+  <div class="film-videos" id="videos" role="group" aria-label="Project videos">
+    <a class="film-link" href="assets/film-window.mp4" data-player="demo">
+      <span class="video-thumb"><img src="assets/img/film-window-poster.jpg" width="540" height="960" loading="lazy" alt=""></span>
+      <span><small>Lab footage · 20 seconds · Silent</small><strong>Watch the window-mounted film</strong></span>
+    </a>
+    <a class="film-link" href="https://www.youtube.com/watch?v=_Lc-6vE74IY&amp;t=23s" data-player="polyu">
+      <span class="video-thumb"><img src="assets/img/rio-video.jpg" width="960" height="540" loading="lazy" alt=""></span>
+      <span><small>PolyU Research and Innovation Office</small><strong>Smart window films with Prof. Jerry Yan</strong></span>
+    </a>
+  </div>
+  <dialog class="watch-dialog" aria-labelledby="watch-title">
+    <div class="watch-heading"><h3 id="watch-title"></h3><form method="dialog"><button autofocus>Close</button></form></div>
+    <div class="watch-screen"></div>
+    <a class="watch-original"></a>
+  </dialog>
+  <template id="player-demo"><video controls playsinline preload="metadata" poster="assets/img/film-window-poster.jpg" src="assets/film-window.mp4" aria-label="Window-mounted film demonstration"></video></template>
+  <template id="player-polyu"><iframe src="https://www.youtube-nocookie.com/embed/_Lc-6vE74IY?start=23&amp;autoplay=1&amp;hl=en" title="PolyU research for a hotter world" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
   <div class="humidity-test">
     <div>
       <h3>Relative humidity after six hours</h3>
@@ -47,8 +54,6 @@
     </dl>
   </div>
   <p class="source"><a href="https://doi.org/10.1002/aenm.202503332">View the chamber measurements in Figure 3b</a> · Advanced Energy Materials, 2025</p>
-    </div>
-  </div>
 <details><summary>How can water captured from the air be used?</summary><p>A separate film stores water for plant irrigation. In a sealed 0.096 m³ chamber, a sample weighing about 1 g reduced relative humidity from 90.7% to 21.6% in one hour. Under ambient conditions, the researchers also reported a water yield of about 1.1 kg per square metre per day. <a href="https://doi.org/10.1002/advs.76145">Read the water-harvesting study</a></p></details></div></section>
 <section id="evidence" class="chapter container"><p class="over">Building measurements / Two-room comparison</p><div class="section-head"><h2>How hot did the sunlit spots get?</h2><p>On three consecutive sunny days, the sunlit spot in the room with bare glass peaked at about 40°C. The corresponding spot in the room with coated glass reached 32–33°C. On the rainy day, the temperatures were closer.</p></div><figure class="chart"><a href="assets/img/room-measurements.webp" aria-label="Open the full-size temperature chart"><img src="assets/img/room-measurements.webp" width="951" height="449" loading="lazy" alt="Temperature at sunlit and shaded spots in both rooms over time. The largest differences occur at sunlit spots on sunny days."></a><figcaption>Blue lines show the room with coated glass. Red and orange lines show the room with bare glass. The break on the time axis separates the sunny days from the later rainy and cloudy days. Project presentation, slide 12. Select the chart to enlarge it.</figcaption></figure><details><summary>How did the glass and interior walls compare?</summary><p>The window in the coated room averaged 1.4–1.7°C warmer, while the interior wall averaged 0–0.6°C cooler. These readings refer to the glass and wall surfaces. The chart above shows the sunlit and shaded measurement points.</p></details></section>
 <section id="impact" class="chapter dark"><div class="container"><p class="over">Hong Kong case study / Retrofit estimates</p><div class="section-head"><h2>Which retrofit fits the building?</h2><p>The Hong Kong Jockey Club building study compared replacement vacuum low‑E glazing with coating the existing single or double glazing. Filter by installation area to compare estimated energy savings, investment and payback.</p></div><div class="scope" role="group" aria-label="Filter by installation area"><button data-scope="all" aria-pressed="true">All options</button><button data-scope="whole" aria-pressed="false">Whole building</button><button data-scope="south" aria-pressed="false">South only</button></div>
