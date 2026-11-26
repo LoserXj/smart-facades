@@ -155,3 +155,26 @@ footer div { display: flex; justify-content: space-between; gap: 12px }
   :lang(en) .overview a { display: grid; grid-template-columns: 8rem 1fr; align-items: baseline; border-bottom: 1px solid var(--line); padding: 9px 0 }
   :lang(en) .scope button { padding-inline: 8px }
 }
+
+/* video layout refinements */
+.film-study { grid-template-columns: clamp(200px, 19vw, 250px) minmax(0, 34rem); gap: clamp(28px, 5vw, 72px); align-items: center; padding: clamp(24px, 3.4vw, 48px) }
+.lab-clip video { border-radius: 6px; box-shadow: 0 18px 40px -22px rgba(16,56,50,.55) }
+.lab-clip figcaption { margin-top: 14px; padding-top: 12px; border-top: 1px solid #c8d6ca }
+.humidity-test .interview-jump { margin-top: 18px }
+.research-interview { grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: clamp(28px, 5vw, 72px); align-items: center; padding: clamp(24px, 3.4vw, 48px); margin-bottom: 40px; background: #f8faf5; border-block: 1px solid #c8d6ca }
+.research-interview h2 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.1; letter-spacing: -.03em }
+.research-interview .speaker { margin: 10px 0 22px; color: var(--body) }
+.research-interview .interview-note { margin: 0 0 6px; padding-top: 14px; border-top: 1px solid #c8d6ca }
+.research-interview a { font-weight: 600 }
+.research-interview iframe { border-radius: 6px; background: var(--pine) url(img/rio-video.jpg) center / cover no-repeat; box-shadow: 0 18px 40px -22px rgba(16,56,50,.55) }
+@media (max-width:800px) {
+  .research-interview { grid-template-columns: 1fr; gap: 22px }
+  .research-interview iframe { order: -1 }
+}
+@media (max-width:620px) {
+  .film-study { grid-template-columns: 1fr; gap: 22px; padding: 20px }
+  .lab-clip { grid-template-columns: 150px 1fr; gap: 16px; align-items: end }
+  .lab-clip video { max-width: 150px }
+  .lab-clip figcaption { margin: 0; border-top: 0; padding-top: 0 }
+  .research-interview { padding: 20px }
+}
