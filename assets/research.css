@@ -73,24 +73,27 @@ h2 { font-size: clamp(2rem, 3.4vw, 3.6rem); line-height: 1.24; letter-spacing: -
 .source,figure.chart figcaption { margin-top: 16px }
 .source a { font-weight: 600 }
 .mist { background: #eaf1e9 }
-.film-videos {
-  display: grid; grid-template-columns: minmax(0, 81fr) minmax(0, 256fr);
-  align-items: start; gap: clamp(18px, 3vw, 40px); max-width: 960px;
-  margin: 0 auto 36px; padding-block: 8px 24px; border-bottom: 1px solid #b7cbbe;
+.film-study {
+  display: grid; grid-template-columns: clamp(170px, 15vw, 205px) minmax(0, 36rem);
+  gap: clamp(24px, 5vw, 76px); align-items: center; justify-content: center;
+  padding: clamp(20px, 3vw, 40px); background: #f8faf5; border-block: 1px solid #c8d6ca;
 }
-.film-videos video,.film-videos iframe { display: block; width: 100%; height: auto; border: 0; background: #15241f }
-.film-videos video { aspect-ratio: 9 / 16 }
-.film-videos iframe { aspect-ratio: 16 / 9 }
-.film-videos figcaption { margin-top: 10px; line-height: 1.4 }
-.film-videos figcaption strong,.film-videos figcaption small { display: block }
-.film-videos figcaption small { margin-top: 3px; font-size: .86rem; color: var(--body) }
-.humidity-test { display: grid; grid-template-columns: 1fr 1fr; gap: 7%; align-items: start }
-.humidity-test h3 { margin: 0 0 8px; line-height: 1.3 }
+.lab-clip video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 3px; background: var(--pine) }
+.lab-clip figcaption { display: grid; gap: 2px; margin-top: 10px; line-height: 1.4 }
+.lab-clip figcaption strong { font-size: .96rem }
+.lab-clip figcaption span,.interview-note { color: var(--body); font-size: .87rem }
+.humidity-test h3 { margin: 0 0 10px; font-size: clamp(1.4rem, 2.1vw, 2rem); line-height: 1.2; letter-spacing: -.025em }
 .humidity-test p { color: var(--body) }
-.humidity-test dl,.humidity-test dd { margin: 0 }
-.humidity-test dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 0; border-bottom: 1px solid #b7cbbe }
-.humidity-test dd { font-family: var(--mono); font-variant-numeric: tabular-nums }
+.humidity-test dl { margin: 16px 0 0; border-top: 1px solid var(--line) }
+.humidity-test dd { margin: 0; font-family: var(--mono); font-variant-numeric: tabular-nums }
+.humidity-test dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line) }
 .humidity-test dl > div:first-child { color: var(--green); font-weight: 650 }
+.interview-jump { display: inline-block; margin-top: 12px; color: var(--green); font-weight: 600 }
+.research-interview { display: grid; grid-template-columns: 1fr 1.45fr; align-items: center; gap: 6%; padding-bottom: 32px; border-bottom: 1px solid var(--line) }
+.research-interview iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; border-radius: 3px; background: var(--pine) }
+.research-interview .speaker { font-size: 1.18rem; margin: 10px 0 16px }
+.research-interview a { color: var(--green); font-size: .92rem }
+.papers-title { margin: 28px 0 14px }
 details { border-block: 1px solid #bccdc2; margin-top: 28px; padding: 16px 2px }
 summary { cursor: pointer; font-weight: 650 }
 details p { margin: 12px 0 3px; max-width: 62em }
@@ -137,10 +140,11 @@ footer div { display: flex; justify-content: space-between; gap: 12px }
   .sample-pair,.reading { grid-template-columns: 1fr }
   .metrics div { padding-left: 9px }
   .metrics span { font-size: .79rem }
-  .film-videos,.humidity-test { grid-template-columns: 1fr; gap: 20px }
-  .film-videos figure:first-child { display: grid; grid-template-columns: minmax(130px, 48%) 1fr; gap: 16px; align-items: end }
-  .film-videos figure:first-child figcaption { margin: 0 }
-
+  .film-study { grid-template-columns: 1fr; gap: 24px; padding: 18px }
+  .lab-clip { display: grid; grid-template-columns: minmax(110px, 46%) 1fr; gap: 14px; align-items: center }
+  .lab-clip video { max-width: 170px }
+  .lab-clip figcaption { margin: 0 }
+  .research-interview { grid-template-columns: 1fr; gap: 20px }
   td,th { padding: 12px }
 }
 @media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto} }

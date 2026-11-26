@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#103832">
 <title>Window films for heat and humidity control · PolyU</title>
 <meta name="description" content="Explore solar-selective window coatings and moisture-responsive films for building retrofits in Hong Kong through sample photographs, field measurements and cost comparisons.">
-<link rel="stylesheet" href="assets/research.css"><script defer src="assets/research.js"></script>
+<link rel="stylesheet" href="assets/research.css?v=film-layout-2"><script defer src="assets/research.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -25,34 +25,26 @@
     <h2>A film that absorbs indoor moisture</h2>
     <p>At night, water-attracting nanofibres capture moisture from the air, and a hydrogel layer stores it. As the film dries in sunlight, it scatters more light and shades the window.</p>
   </div>
-  <div class="film-videos" id="videos" role="group" aria-label="Project videos">
-    <figure>
-      <video controls playsinline preload="metadata" width="540" height="960"
+  <div class="film-study" id="videos">
+    <figure class="lab-clip">
+      <video controls playsinline preload="metadata" width="200" height="356"
              src="assets/film-window.mp4" poster="assets/img/film-window-poster.jpg" aria-labelledby="demo-caption">
         <a href="assets/film-window.mp4">Play the film demonstration</a>
       </video>
-      <figcaption id="demo-caption"><strong>Window-mounted film</strong><small>Lab footage · 20 seconds · Silent</small></figcaption>
+      <figcaption id="demo-caption"><strong>Window-mounted film</strong><span>20-second demonstration · Silent</span></figcaption>
     </figure>
-    <figure id="polyu-video">
-      <iframe src="https://www.youtube-nocookie.com/embed/_Lc-6vE74IY?start=23&amp;playsinline=1&amp;hl=en"
-              title="PolyU research on smart window films with Prof. Jerry Yan" width="640" height="360"
-              loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <figcaption><strong>Smart window films with Prof. Jerry Yan</strong><small>PolyU Research and Innovation Office · <a href="https://www.youtube.com/watch?v=_Lc-6vE74IY&amp;t=23s">Watch on YouTube</a></small></figcaption>
-    </figure>
-  </div>
-  <div class="humidity-test">
-    <div>
+    <div class="humidity-test">
       <h3>Relative humidity after six hours</h3>
-      <p>In a sealed chamber measuring 40 × 60 × 40 cm, a 5 × 5 × 0.5 cm film sample brought relative humidity down from 91.73%. The researchers tested equal masses of silica gel and 4A molecular sieves for comparison.</p>
+      <p>Starting at 91.73% relative humidity, researchers compared the film with equal masses of two common desiccants in a sealed chamber.</p>
+      <dl aria-label="Relative humidity after six hours by material">
+        <div><dt>Moisture-responsive film</dt><dd>53.76%</dd></div>
+        <div><dt>Silica gel</dt><dd>72.05%</dd></div>
+        <div><dt>4A molecular sieves</dt><dd>76.22%</dd></div>
+      </dl>
+      <p class="source">Film sample: 5 × 5 × 0.5 cm. Chamber: 40 × 60 × 40 cm. <a href="https://doi.org/10.1002/aenm.202503332">See Figure 3b</a>.</p>
+      <a class="interview-jump" href="#polyu-video">Watch the PolyU interview</a>
     </div>
-    <dl aria-label="Relative humidity after six hours by material">
-      <div><dt>Moisture-responsive film</dt><dd>53.76%</dd></div>
-      <div><dt>Silica gel</dt><dd>72.05%</dd></div>
-      <div><dt>4A molecular sieves</dt><dd>76.22%</dd></div>
-    </dl>
   </div>
-  <p class="source"><a href="https://doi.org/10.1002/aenm.202503332">View the chamber measurements in Figure 3b</a> · Advanced Energy Materials, 2025</p>
 <details><summary>How can water captured from the air be used?</summary><p>A separate film stores water for plant irrigation. In a sealed 0.096 m³ chamber, a sample weighing about 1 g reduced relative humidity from 90.7% to 21.6% in one hour. Under ambient conditions, the researchers also reported a water yield of about 1.1 kg per square metre per day. <a href="https://doi.org/10.1002/advs.76145">Read the water-harvesting study</a></p></details></div></section>
 <section id="evidence" class="chapter container"><p class="over">Building measurements / Two-room comparison</p><div class="section-head"><h2>How hot did the sunlit spots get?</h2><p>On three consecutive sunny days, the sunlit spot in the room with bare glass peaked at about 40°C. The corresponding spot in the room with coated glass reached 32–33°C. On the rainy day, the temperatures were closer.</p></div><figure class="chart"><a href="assets/img/room-measurements.webp" aria-label="Open the full-size temperature chart"><img src="assets/img/room-measurements.webp" width="951" height="449" loading="lazy" alt="Temperature at sunlit and shaded spots in both rooms over time. The largest differences occur at sunlit spots on sunny days."></a><figcaption>Blue lines show the room with coated glass. Red and orange lines show the room with bare glass. The break on the time axis separates the sunny days from the later rainy and cloudy days. Project presentation, slide 12. Select the chart to enlarge it.</figcaption></figure><details><summary>How did the glass and interior walls compare?</summary><p>The window in the coated room averaged 1.4–1.7°C warmer, while the interior wall averaged 0–0.6°C cooler. These readings refer to the glass and wall surfaces. The chart above shows the sunlit and shaded measurement points.</p></details></section>
 <section id="impact" class="chapter dark"><div class="container"><p class="over">Hong Kong case study / Retrofit estimates</p><div class="section-head"><h2>Which retrofit fits the building?</h2><p>The Hong Kong Jockey Club building study compared replacement vacuum low‑E glazing with coating the existing single or double glazing. Filter by installation area to compare estimated energy savings, investment and payback.</p></div><div class="scope" role="group" aria-label="Filter by installation area"><button data-scope="all" aria-pressed="true">All options</button><button data-scope="whole" aria-pressed="false">Whole building</button><button data-scope="south" aria-pressed="false">South only</button></div>
@@ -60,5 +52,20 @@
 <tr data-area="whole"><th>Replacement vacuum low‑E glazing</th><td>Whole building</td><td>11.27%</td><td>864,622</td><td>18,000,000</td><td>13.01</td></tr><tr data-area="south"><th>Replacement vacuum low‑E glazing</th><td>South façade</td><td>5.18%</td><td>397,595</td><td>6,331,521</td><td>9.95</td></tr>
 <tr data-area="whole"><th>Coating on single glazing</th><td>Whole building</td><td>5.06%</td><td>388,082</td><td>119,845</td><td>0.19</td></tr><tr data-area="south"><th>Coating on single glazing</th><td>South façade</td><td>2.95%</td><td>226,267</td><td>42,154</td><td>0.12</td></tr>
 <tr data-area="whole"><th>Coating on double glazing</th><td>Whole building</td><td>9.74%</td><td>746,633</td><td>2,857,496</td><td>2.39</td></tr><tr data-area="south"><th>Coating on double glazing</th><td>South façade</td><td>8.66%</td><td>663,744</td><td>2,802,269</td><td>2.64</td></tr></tbody></table></div><p class="source">Estimates for this building and the stated installation areas. Project supplement, Figure 6, and project presentation, slide 13.</p></div></section>
-<section id="research" class="chapter container"><p class="over">Research sources</p><div class="section-head"><h2>Papers and project video</h2><p>Read the studies behind the materials and measurements, or watch the PolyU Research and Innovation Office’s interview with the research team.</p></div><div class="reading"><a href="https://doi.org/10.1016/j.cej.2025.167017"><b>Optical performance and durability of the high-transparency coating</b><span>Chemical Engineering Journal · 2025</span></a><a href="https://doi.org/10.1039/D4TA05784H"><b>Outdoor tests of a solar-selective cooling film for buildings</b><span>Journal of Materials Chemistry A · 2025</span></a><a href="https://doi.org/10.1002/aenm.202503332"><b>Moisture-responsive, light-regulating film</b><span>Advanced Energy Materials · 2025</span></a><a href="https://doi.org/10.1002/advs.76145"><b>Rapid dehumidification and water harvesting for irrigation</b><span>Advanced Science · 2026</span></a><a href="https://doi.org/10.1002/advs.202511076"><b>Tri-band, dual-response smart windows</b><span>Advanced Science · 2026</span></a><a href="#polyu-video"><b>Watch the research team’s introduction</b><span>PolyU Research and Innovation Office · Video</span></a></div></section>
+<section id="research" class="chapter container">
+  <div id="polyu-video" class="research-interview">
+    <div>
+      <p class="over">PolyU Research and Innovation Office</p>
+      <h2>Smart window films</h2>
+      <p class="speaker">With Prof. Jerry Yan</p>
+      <p class="interview-note">The window-film segment begins at 00:23.</p>
+      <a href="https://www.youtube.com/watch?v=_Lc-6vE74IY&amp;t=23s">Watch on YouTube</a>
+    </div>
+    <iframe src="https://www.youtube-nocookie.com/embed/_Lc-6vE74IY?start=23&amp;playsinline=1&amp;hl=en"
+              title="PolyU research on smart window films with Prof. Jerry Yan" width="640" height="360"
+              loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <h3 class="papers-title">Research papers</h3>
+  <div class="reading"><a href="https://doi.org/10.1016/j.cej.2025.167017"><b>Optical performance and durability of the high-transparency coating</b><span>Chemical Engineering Journal · 2025</span></a><a href="https://doi.org/10.1039/D4TA05784H"><b>Outdoor tests of a solar-selective cooling film for buildings</b><span>Journal of Materials Chemistry A · 2025</span></a><a href="https://doi.org/10.1002/aenm.202503332"><b>Moisture-responsive, light-regulating film</b><span>Advanced Energy Materials · 2025</span></a><a href="https://doi.org/10.1002/advs.76145"><b>Rapid dehumidification and water harvesting for irrigation</b><span>Advanced Science · 2026</span></a><a href="https://doi.org/10.1002/advs.202511076"><b>Tri-band, dual-response smart windows</b><span>Advanced Science · 2026</span></a></div></section>
 </main><footer><div class="container"><span>Department of Building Environment and Energy Engineering · The Hong Kong Polytechnic University</span><a href="#top">Back to top</a></div></footer></body></html>
