@@ -4,6 +4,7 @@
   --heat:#e2622d; --heat-soft:#fdeee6;
   --water:#2c78c4; --water-soft:#e6f0fa;
   --deep:#0f2027;
+  --polyu:#a6192e;
   --r:20px; --maxw:1120px;
   --font:"Inter","SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -22,7 +23,8 @@ h2.center{text-align:center;margin-bottom:48px}
 .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
 .topnav{display:flex;align-items:center;height:60px;gap:24px}
 .brand{font-weight:700;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
-.mark{background:var(--deep);color:#fff;font-size:12px;letter-spacing:.08em;padding:4px 8px;border-radius:6px}
+.uni{color:var(--polyu);font-weight:800;font-size:19px;letter-spacing:-.01em}
+.brand-sep{width:1px;height:20px;background:var(--line)}
 .nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
 .nav a{text-decoration:none;font-size:15px;color:var(--ink-2);padding:6px 12px;border-radius:999px;white-space:nowrap}
@@ -31,7 +33,7 @@ h2.center{text-align:center;margin-bottom:48px}
 /* hero */
 .hero{padding:80px 0 96px;background:linear-gradient(180deg,#fff 0,var(--tint) 100%)}
 .hero-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
-.eyebrow{font-size:13px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--heat);margin:0 0 18px}
+.eyebrow{font-size:13px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--polyu);margin:0 0 18px}
 h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.045em;margin:0}
 .sub{font-size:20px;color:var(--ink-2);margin:24px 0 32px;max-width:440px}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
@@ -106,7 +108,62 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.045em;margin:
 .footer p{margin:0 0 8px;max-width:900px}
 .footer .srcs{color:#73868e;font-size:12px}
 
+/* problem strip */
+.problem{background:var(--deep);color:#fff;padding:40px 0}
+.problem .wrap{display:grid;grid-template-columns:170px 1fr;gap:32px;align-items:center}
+.problem-title{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:0}
+.problem-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.problem-list b{display:block;font-size:16px;margin-bottom:4px}
+.problem-list li:nth-child(1) b{color:#f39a72} .problem-list li:nth-child(2) b{color:#86b9ea} .problem-list li:nth-child(3) b{color:#e6e2db}
+.problem-list span{font-size:14px;color:#a9b9bf;line-height:1.45}
+
+/* how it works */
+.how{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.how-card{background:#fff;border-radius:28px;padding:34px;border:1px solid var(--line)}
+.how-tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 10px}
+.how-card.heat .how-tag{color:var(--heat)} .how-card.water .how-tag{color:var(--water)}
+.how-card h3{font-size:26px;letter-spacing:-.02em;margin:0 0 22px;line-height:1.15}
+.how-img{width:100%;border-radius:14px;margin-bottom:22px}
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 18px 44px;counter-increment:s}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff}
+.how-card.heat .steps li::before{background:var(--heat)} .how-card.water .steps li::before{background:var(--water)}
+.steps b{display:block;font-size:16px}
+.steps span{font-size:15px;color:var(--ink-2)}
+
+/* vs */
+.vs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vs li{background:#fff;border-radius:var(--r);padding:30px;border:1px solid var(--line)}
+.vs-head{font-size:13px;font-weight:650;color:var(--ink-3);margin:0 0 14px;text-transform:uppercase;letter-spacing:.06em}
+.vs b{display:block;font-size:clamp(22px,2.3vw,28px);letter-spacing:-.025em;line-height:1.1;margin-bottom:10px}
+.heat-t{color:var(--heat)} .water-t{color:var(--water)} .deep-t{color:var(--deep)}
+.vs span{font-size:15px;color:var(--ink-2)}
+
+/* install */
+.install{list-style:none;padding:0;margin:0 0 64px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:none}
+.install li{position:relative;padding-top:8px}
+.install .n{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--deep);color:#fff;font-weight:700;font-size:18px;margin-bottom:16px}
+.install b{display:block;font-size:20px;letter-spacing:-.01em;margin-bottom:6px}
+.install li > span:last-child{color:var(--ink-2);font-size:15px}
+.uses-title{font-size:22px;letter-spacing:-.02em;margin:0 0 20px;text-align:center}
+
+/* watch */
+.watch{background:var(--deep);color:#fff;padding:96px 0}
+.watch-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.video-card{position:relative;display:block;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.video-card img{width:100%;transition:transform .4s}
+.video-card:hover img{transform:scale(1.03)}
+.play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(255,255,255,.92)}
+.play::after{content:"";position:absolute;left:31px;top:24px;border-left:20px solid var(--polyu);border-top:14px solid transparent;border-bottom:14px solid transparent}
+.watch h2{color:#fff;font-size:clamp(26px,3vw,36px)}
+.eyebrow.light{color:#f0a3ad}
+.lead.light{color:#a9b9bf}
+.btn.light{background:#fff;color:var(--deep)}
+
 @media (max-width:900px){
+  .problem .wrap,.how,.watch-grid{grid-template-columns:1fr;gap:24px}
+  .problem-list,.vs,.install{grid-template-columns:1fr;gap:18px}
   .hero-grid,.products,.team,.hk{grid-template-columns:1fr;gap:36px}
   .hk-img{display:none}
   .big-stats,.uses{grid-template-columns:1fr;gap:24px}
@@ -121,7 +178,7 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.045em;margin:
   .p-body{padding:24px}
   .bar-row{grid-template-columns:1fr auto;row-gap:6px}
   .bar{grid-column:1/-1;grid-row:2}
-  .brand{display:none}
+  .brand-name,.brand-sep{display:none}
   .nav{margin-left:0}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
