@@ -1,68 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif">
   <defs>
-    <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2f6e9a"/></marker>
-    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c4532f"/></marker>
-    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a9196"/></marker>
-    <pattern id="pores" width="18" height="12" patternUnits="userSpaceOnUse"><circle cx="9" cy="6" r="2.2" fill="#ffffff" opacity=".75"/></pattern>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#333"/></marker>
   </defs>
+  <rect width="1200" height="420" fill="#ffffff"/>
 
-  <rect width="1200" height="460" fill="#fbfaf7"/>
-
-  <!-- NIGHT panel -->
-  <rect x="20" y="20" width="520" height="420" rx="6" fill="#eef3f7"/>
-  <!-- moon -->
-  <path d="M86 70 a26 26 0 1 0 30 34 a20 20 0 1 1 -30 -34z" fill="#2f6e9a"/>
-  <text x="136" y="86" font-size="18" font-weight="600" letter-spacing="2" fill="#2f6e9a">NIGHT</text>
-  <text x="136" y="116" font-size="28" font-weight="600" fill="#14191c">Moisture adsorption</text>
-
-  <!-- film (dry->loaded) -->
-  <rect x="110" y="190" width="340" height="40" rx="3" fill="#2f6e9a"/>
-  <rect x="110" y="190" width="340" height="40" rx="3" fill="url(#pores)"/>
-  <text x="280" y="172" font-size="22" fill="#4d565c" text-anchor="middle">Film at the window edge</text>
-
-  <!-- water vapour moving into film -->
-  <g fill="#2f6e9a">
-    <circle cx="150" cy="360" r="5"/><circle cx="210" cy="385" r="4"/><circle cx="270" cy="350" r="5"/>
-    <circle cx="330" cy="380" r="4"/><circle cx="390" cy="358" r="5"/><circle cx="240" cy="400" r="3.5"/><circle cx="360" cy="405" r="3.5"/>
+  <!-- Night -->
+  <text x="280" y="60" font-size="26" font-weight="600" fill="#222" text-anchor="middle">Night: absorb moisture</text>
+  <rect x="130" y="150" width="300" height="34" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="280" y="135" font-size="20" fill="#666" text-anchor="middle">Film</text>
+  <g stroke="#333" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M200 300 L200 196"/><path d="M280 300 L280 196"/><path d="M360 300 L360 196"/>
   </g>
-  <g stroke="#2f6e9a" stroke-width="2.5" fill="none" marker-end="url(#ab)">
-    <path d="M190 335 L190 248"/><path d="M280 330 L280 248"/><path d="M370 335 L370 248"/>
-  </g>
-  <text x="280" y="430" font-size="22" fill="#4d565c" text-anchor="middle">Humid indoor air</text>
+  <text x="280" y="340" font-size="20" fill="#666" text-anchor="middle">Water vapour from indoor air</text>
 
-  <!-- DAY panel -->
-  <rect x="660" y="20" width="520" height="420" rx="6" fill="#f7efe9"/>
-  <!-- sun -->
-  <circle cx="726" cy="88" r="18" fill="#c4532f"/>
-  <g stroke="#c4532f" stroke-width="3" stroke-linecap="round">
-    <path d="M726 56 v-10"/><path d="M726 120 v10"/><path d="M694 88 h-10"/><path d="M758 88 h10"/>
-    <path d="M703 65 l-7 -7"/><path d="M749 111 l7 7"/><path d="M749 65 l7 -7"/><path d="M703 111 l-7 7"/>
+  <!-- cycle -->
+  <g stroke="#999" stroke-width="2" fill="none">
+    <path d="M500 150 L690 150" marker-end="url(#a)"/>
+    <path d="M690 240 L500 240" marker-end="url(#a)"/>
   </g>
-  <text x="776" y="86" font-size="18" font-weight="600" letter-spacing="2" fill="#c4532f">DAY</text>
-  <text x="776" y="116" font-size="28" font-weight="600" fill="#14191c">Solar-driven desorption</text>
+  <text x="595" y="135" font-size="18" fill="#888" text-anchor="middle">sunrise</text>
+  <text x="595" y="270" font-size="18" fill="#888" text-anchor="middle">sunset</text>
 
-  <!-- sunlight onto film -->
-  <g stroke="#c4532f" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#ah)">
-    <path d="M820 150 L860 182"/><path d="M920 150 L940 182"/><path d="M1020 150 L1020 182"/>
+  <!-- Day -->
+  <text x="920" y="60" font-size="26" font-weight="600" fill="#222" text-anchor="middle">Day: release moisture</text>
+  <rect x="770" y="150" width="300" height="34" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="920" y="135" font-size="20" fill="#666" text-anchor="middle">Film warmed by sunlight</text>
+  <g stroke="#333" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M840 196 L840 300"/><path d="M920 196 L920 300"/><path d="M1000 196 L1000 300"/>
   </g>
-
-  <!-- film (warm) -->
-  <rect x="750" y="190" width="340" height="40" rx="3" fill="#c4532f"/>
-  <rect x="750" y="190" width="340" height="40" rx="3" fill="url(#pores)"/>
-  <text x="920" y="268" font-size="22" fill="#4d565c" text-anchor="middle">Film warmed by sunlight</text>
-
-  <!-- water released -->
-  <g stroke="#2f6e9a" stroke-width="2.5" fill="none" marker-end="url(#ab)">
-    <path d="M830 280 L830 350"/><path d="M920 280 L920 350"/><path d="M1010 280 L1010 350"/>
-  </g>
-  <g fill="#2f6e9a">
-    <circle cx="830" cy="372" r="5"/><circle cx="920" cy="372" r="5"/><circle cx="1010" cy="372" r="5"/>
-  </g>
-  <text x="920" y="430" font-size="22" fill="#4d565c" text-anchor="middle">Stored water released</text>
-
-  <!-- cycle arrows -->
-  <path d="M550 175 C580 150 620 150 650 175" stroke="#8a9196" stroke-width="2" fill="none" marker-end="url(#ag)"/>
-  <path d="M650 285 C620 310 580 310 550 285" stroke="#8a9196" stroke-width="2" fill="none" marker-end="url(#ag)"/>
-  <text x="600" y="230" font-size="16" font-weight="600" letter-spacing="1.5" fill="#8a9196" text-anchor="middle">DAILY</text>
-  <text x="600" y="252" font-size="16" font-weight="600" letter-spacing="1.5" fill="#8a9196" text-anchor="middle">CYCLE</text>
+  <text x="920" y="340" font-size="20" fill="#666" text-anchor="middle">Stored water released</text>
 </svg>
