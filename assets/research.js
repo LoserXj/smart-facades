@@ -23,3 +23,15 @@ bindChoices('[data-scope]', button => {
     row.hidden = scope !== 'all' && row.dataset.area !== scope;
   });
 });
+
+// Gentle reveal of content blocks as they scroll into view
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const blocks = document.querySelectorAll('.section-head, .sample-pair, .metrics, .film-study, .chart, .table-scroll, .research-interview, .reading, .about-grid');
+  document.documentElement.classList.add('reveal-ready');
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -8% 0px' });
+  blocks.forEach(b => io.observe(b));
+}
+// Header shadow once the page scrolls
+addEventListener('scroll', () => document.body.classList.toggle('scrolled', scrollY > 8), { passive: true });
