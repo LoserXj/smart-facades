@@ -130,7 +130,9 @@ h1 em{color:var(--ink-3)}
 
 /* team */
 .team{display:grid;grid-template-columns:1.1fr 1fr;gap:120px;align-items:start}
-.team-logo{height:52px;width:auto;margin-bottom:48px}
+.brand{text-decoration:none}
+.university-name{display:inline-block;border-left:3px solid var(--polyu);padding-left:11px;font-weight:600;line-height:1.15}
+.team .university-name{margin-bottom:48px}
 .team .lead{margin-bottom:40px}
 .names{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
 .names li{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}

@@ -23,11 +23,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .table-scroll:focu
 .container { width: min(1280px, 100% - clamp(40px, 9vw, 160px)); margin-inline: auto }
 header { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line) }
 .bar { height: 76px; display: flex; align-items: center; gap: 32px }
-.identity img { width: clamp(155px, 17vw, 212px) }
+.identity { text-decoration: none }
+.university-name { display: inline-block; border-left: 3px solid #a71930; padding-left: 11px; font-size: 1rem; line-height: 1.13; font-weight: 650 }
 nav { display: flex; gap: clamp(18px, 2.7vw, 44px); margin-left: auto }
-nav a, .language { font-size: .94rem; font-weight: 550; text-decoration: none }
+nav a { font-size: .94rem; font-weight: 550; text-decoration: none }
 nav a:hover, .reading a:hover { color: var(--green); text-decoration: underline }
-.language { border-left: 1px solid var(--line); padding-left: 23px; color: var(--green) }
+
 .hero { background: var(--pine); color: white }
 .hero-grid { display: grid; grid-template-columns: 1.06fr 1fr; align-items: stretch; gap: 7% }
 .intro { padding: clamp(55px, 6.1vw, 92px) 0 }
@@ -108,7 +109,7 @@ footer div { display: flex; justify-content: space-between; gap: 12px }
   .bar { height: auto; min-height: 62px; flex-wrap: wrap; gap: 0; padding-top: 12px }
   nav { order: 3; width: 100%; margin: 9px 0 0; padding-bottom: 9px; justify-content: space-between; gap: 8px }
   nav a { font-size: .88rem }
-  .language { margin-left: auto }
+
   html { scroll-padding-top: 110px }
   .hero-grid { gap: 20px }
   .hero-photo figcaption { flex-wrap: wrap; padding: 40px 12px 12px }
