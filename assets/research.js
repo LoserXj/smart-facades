@@ -17,15 +17,6 @@ bindChoices('[data-room]', button => {
   document.getElementById('room-label').textContent = label;
 });
 
-bindChoices('[data-hour]', button => {
-  const hour = button.dataset.hour;
-  const image = document.getElementById('cycle-image');
-  image.src = 'assets/img/cycle-' + hour + '.webp';
-  image.alt = document.querySelector('.cycle-photo figcaption').textContent + ' · ' + button.textContent;
-  document.getElementById('cycle-time').textContent = hour + ':00';
-  document.getElementById('cycle-description').textContent = button.dataset.description;
-});
-
 bindChoices('[data-scope]', button => {
   const scope = button.dataset.scope;
   document.querySelectorAll('tr[data-area]').forEach(row => {
