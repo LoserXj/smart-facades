@@ -133,3 +133,10 @@ footer div { display: flex; justify-content: space-between; gap: 12px }
   td,th { padding: 12px }
 }
 @media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto} }
+:lang(en) .intro h1 { font-size: clamp(2.8rem, 4.8vw, 4.7rem); text-wrap: balance }
+:lang(en) .switch button { white-space: nowrap }
+@media (max-width:620px) {
+  :lang(en) .overview { grid-template-columns: 1fr }
+  :lang(en) .overview a { display: grid; grid-template-columns: 8rem 1fr; align-items: baseline; border-bottom: 1px solid var(--line); padding: 9px 0 }
+  :lang(en) .scope button { padding-inline: 8px }
+}
