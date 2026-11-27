@@ -375,3 +375,14 @@ footer { background: var(--pine); color: #cfe0d8; border: 0; padding: 48px 0 }
 .overview { margin-top: 28px }
 header { background: rgba(246,245,240,.94) }
 @media (max-width:800px) { header { background: var(--paper) } .foot-links { justify-content: flex-start } }
+
+/* About us: lab profile */
+.about h2 { font-size: clamp(1.9rem, 3vw, 2.9rem); max-width: 18em }
+.topics { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0 0 }
+.topics li { padding: 6px 14px; border-radius: 999px; background: #e6efe4; color: var(--green); font-size: .86rem; font-weight: 600 }
+.team-note { margin-top: 16px; color: var(--body); font-size: .9rem }
+.uex-topics { list-style: none; padding: 0; margin: 4px 0 4px; border-top: 1px solid var(--line) }
+.uex-topics li { padding: 9px 0 9px 18px; border-bottom: 1px solid var(--line); font-size: .9rem; position: relative; line-height: 1.45 }
+.uex-topics li::before { content: ''; position: absolute; left: 0; top: 17px; width: 6px; height: 6px; border-radius: 50%; background: #a71930 }
+.about-uex { position: sticky; top: 96px }
+@media (max-width:900px) { .about-uex { position: static } }
