@@ -386,8 +386,3 @@ header { background: rgba(246,245,240,.94) }
 .uex-topics li::before { content: ''; position: absolute; left: 0; top: 17px; width: 6px; height: 6px; border-radius: 50%; background: #a71930 }
 .about-uex { position: sticky; top: 96px }
 @media (max-width:900px) { .about-uex { position: static } }
-.about-uex { position: static }
-.about-uex:hover { transform: none }
-.about-uex address { font-style: normal; color: var(--body); font-size: .94rem; line-height: 1.6; padding-top: 12px; border-top: 1px solid var(--line) }
-.about-uex a { color: var(--green); font-weight: 600; font-size: .92rem }
-.about-grid { align-items: center }
